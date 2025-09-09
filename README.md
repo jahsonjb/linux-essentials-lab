@@ -3,7 +3,7 @@
 This project documents my hands-on practice for the **Linux Essentials (010-160)** exam objectives.  
 The lab was built with **VMware Workstation/Fusion**, using both **Rocky Linux 9 (Minimal)** and **Ubuntu 24.04 LTS**.  
 
-Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to highlight the similarities and differences between Debian-based and RHEL-based systems.
+Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to highlight similarities and differences between Debian-based and RHEL-based systems.
 
 ---
 
@@ -17,94 +17,135 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 - Networking basics (IPs, routes, name resolution, firewalls)  
 - Package managers (APT on Ubuntu, DNF on Rocky)  
 - Scripting & automation (bash fundamentals, cron)  
+- Troubleshooting (DNS, fstab, etc.)
 
 ---
 
 ## 🧱 Lab Topology
 
-**VM 1: Rocky Linux 9 (Minimal)**  
-- 2 vCPU, 2–4 GB RAM, 30 GB disk  
-- NAT adapter (VMnet8)  
+### Ubuntu VM
+- **Ubuntu 24.04 LTS**
+- 2 vCPU, 2–4 GB RAM, 30 GB disk
+- NAT adapter (VMnet8)
+- Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-db`
+
+![Ubuntu VM Config](screenshots/ubuntu_vm_config.png)
+
+---
+
+### Rocky VM
+- **Rocky Linux 9 (Minimal)**
+- 2 vCPU, 2–4 GB RAM, 30 GB disk
+- NAT adapter (VMnet8)
 - Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-pages`
 
-**VM 2: Ubuntu 24.04 LTS**  
-- 2 vCPU, 2–4 GB RAM, 30 GB disk  
-- NAT adapter (VMnet8)  
-- Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-db`
+![Rocky VM Config](screenshots/rocky_vm_config.png)
 
 ---
 
 ## 🖼️ Screenshots
 
-### 1. System Identity & Help
-Checking kernel, distro info, and manual pages.  
-Commands: `uname -a`, `/etc/os-release`, `man ls`.
+### 1. System Identity & Release Info
+- `uname -a`, `/etc/os-release`, `hostnamectl`  
+- Both Ubuntu and Rocky release identifiers  
 
-![System Identity](screenshots/rocky_system_identify.png)
+![System Identify (Ubuntu)](screenshots/system_identify_ubuntu.png)  
+![Ubuntu Release](screenshots/ubuntu_release.png)  
+![Rocky System Identify](screenshots/rocky_system_identify.png)  
+![Rocky Release](screenshots/rocky_release.png)
 
 ---
 
 ### 2. Navigation & Files
-Directory navigation, hidden files, creating/moving files, and tree view.  
-Commands: `pwd`, `ls -lah`, `mkdir -p`, `tree`.
+- `pwd`, `ls -lah`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm`  
+- Tree view of nested directories  
 
-![Navigation](screenshots/02_navigation.png)
-
----
-
-### 3. Packages & Repos
-Working with both **APT (Ubuntu)** and **DNF (Rocky)** to install, inspect, and remove packages.  
-Example: `dnf info htop` (Rocky) and `apt show htop` (Ubuntu).
-
-![Packages](screenshots/03_packages.png)
+![File Navigation](screenshots/file_navigation.png)  
+![File Manipulation](screenshots/file_manipulation.png)  
+![Tree and Find](screenshots/tree_and_find.png)  
+![Find](screenshots/find.png)
 
 ---
 
-### 4. Users, Groups, Permissions
-Creating users, assigning groups, and applying permissions/ACLs.  
-Commands: `id labuser`, `chmod`, `chown`, `setfacl`.
+### 3. Text Viewing & Editing
+- `man ls`, `less`, `nano` editor, writing scripts  
 
-![Permissions](screenshots/04_permissions.png)
-
----
-
-### 5. Processes & Services
-Monitoring and managing services with **systemd**.  
-Commands: `ps aux`, `systemctl status ssh`, `journalctl -u ssh`.
-
-![Processes](screenshots/05_processes.png)
+![man ls](screenshots/man_ls.png)  
+![Nano and Script](screenshots/nano_and_script.png)  
+![Script Output](screenshots/script_output.png)
 
 ---
 
-### 6. Hardware & Storage
-Inspecting CPU, disks, and filesystems. Creating a loopback “disk,” mounting it, and updating `/etc/fstab`.  
-Commands: `lscpu`, `lsblk -f`, `df -hT`, `losetup`, `mount`.
+### 4. Command Line Power
+- Pipes and redirection  
 
-![Storage](screenshots/06_storage.png)
-
----
-
-### 7. Networking Basics
-Inspecting addresses, routes, and DNS resolution. Configuring firewalls with `ufw` (Ubuntu) and `firewalld` (Rocky).  
-Commands: `ip a`, `ip r`, `ping`, `host example.com`.
-
-![Networking](screenshots/07_networking.png)
+![Piping](screenshots/piping.png)
 
 ---
 
-### 8. Bash & Cron
-Writing a backup script, making it executable, and scheduling it with `cron`.  
-File: `~/bin/quickbackup.sh`
+### 5. Packages & Repositories
+- APT (Ubuntu) vs DNF (Rocky)  
+- Installing, inspecting, and removing packages  
 
-![Scripting](screenshots/08_scripting.png)
+![Package Manager](screenshots/package_manager.png)
 
 ---
 
-### 9. Break/Fix Drills
+### 6. Users, Groups, Permissions
+- Adding users, group membership, sudo/wheel access  
+- Ownership and file permissions  
+- ACLs (Access Control Lists)  
+- Sticky bit/shared directories  
+
+![Add User](screenshots/add_user.png)  
+![Permissions and Owners](screenshots/permissions_and_owners.png)  
+![ACLs](screenshots/acls.png)  
+![Shared Directory](screenshots/shared.png)
+
+---
+
+### 7. Processes, Services, and Logs
+- `ps aux`, `pgrep`, `systemctl`, `journalctl`  
+- Service management  
+
+![Processes, Services, and Logs](screenshots/processes_services_and_logs.png)
+
+---
+
+### 8. Hardware & Storage
+- Inspecting CPU and block devices  
+- Mounting loopback devices and editing `/etc/fstab`  
+
+![System Inspection](screenshots/system_inspection.png)  
+![Disks and Mounts](screenshots/disks_and_mounts.png)
+
+---
+
+### 9. Networking & Name Resolution
+- `ip a`, `ip r`, `ping`, `curl`, `host`, `getent hosts`  
+- Configuring firewalls  
+
+![Networking](screenshots/networking.png)  
+![Name Resolution](screenshots/name_resolution.png)
+
+---
+
+### 10. Bash, Scripts, and Automation
+- Writing and running bash scripts  
+- Cron jobs (`crontab -e`, `crontab -l`)  
+
+![Nano and Script](screenshots/nano_and_script.png)  
+![Script Output](screenshots/script_output.png)  
+![Crontab](screenshots/crontab.png)
+
+---
+
+### 11. Break/Fix Drills
 - DNS misconfiguration and recovery  
-- `fstab` typo detection  
+- fstab errors and fixes  
 
-![Break Fix](screenshots/09_breakfix.png)
+![Break and Fix DNS (Rocky)](screenshots/break_and_fix_dns_rocky.png)  
+![Fix fstab](screenshots/fix_fstab.png)
 
 ---
 
@@ -113,12 +154,12 @@ File: `~/bin/quickbackup.sh`
 - Identify kernel & distro (`uname -r`, `/etc/os-release`)  
 - Navigate with absolute/relative paths and wildcards  
 - Install/remove packages with APT and DNF  
-- Manage users, groups, and permissions (chmod, chown, ACL)  
+- Manage users, groups, and permissions (chmod, chown, ACLs)  
 - Inspect processes/services with `systemctl` and `journalctl`  
-- Configure IPs, routes, and firewalls  
+- Configure IPs, routes, and name resolution  
 - Write/run a bash script and schedule with `cron`  
 - Mount and test filesystems with `/etc/fstab`  
-- Troubleshoot common break/fix scenarios (DNS, fstab)  
+- Troubleshoot common issues (DNS, fstab)  
 
 ---
 
@@ -129,4 +170,3 @@ This lab shows practical Linux skills across **two families of distributions**:
 - **RHEL-based (Rocky)** → DNF package manager  
 
 Practicing on both clarified differences in package handling, service names, log locations, and firewall tools.
-
