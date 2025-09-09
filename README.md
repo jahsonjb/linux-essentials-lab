@@ -114,7 +114,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ### 8. Hardware & Storage
 - Inspecting CPU and block devices  
-- Mounting loopback devices and editing `/etc/fstab`  
+- Mounting loopback devices
 
 ![System Inspection](screenshots/system_inspection.png)  
 ![Disks and Mounts](screenshots/disks_and_mounts.png)
