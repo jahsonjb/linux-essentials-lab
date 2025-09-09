@@ -35,7 +35,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ### Rocky VM
 - **Rocky Linux 9 (Minimal)**
-- 2 vCPU, 8 GB RAM, 40 GB disk
+- 2 vCPU, 7.5 GB RAM, 40 GB disk
 - NAT adapter (VMnet8)
 - Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-pages`
 
