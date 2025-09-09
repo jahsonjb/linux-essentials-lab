@@ -57,7 +57,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 ---
 
 ### 2. Navigation & Files
-- `pwd`, `ls -lah`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm`  
+- `pwd`, `ls -la`, `cd`, `mkdir`, `touch`, `cp`, `mv`, `rm`  
 - Tree view of nested directories  
 
 ![File Navigation](screenshots/file_navigation.png)  
