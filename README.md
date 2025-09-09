@@ -40,7 +40,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 Checking kernel, distro info, and manual pages.  
 Commands: `uname -a`, `/etc/os-release`, `man ls`.
 
-![System Identity](screenshots/rocky system identify.png)
+![System Identity](screenshots/rocky_system_identify.png)
 
 ---
 
