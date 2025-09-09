@@ -122,7 +122,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 ---
 
 ### 9. Networking & Name Resolution
-- `ip a`, `ip r`, `ping`, `curl`, `host`, `getent hosts`  
+- `ip a`, `ip r`, `ping`, `host`, `getent hosts`  
 - Configuring firewalls  
 
 ![Networking](screenshots/networking.png)  
