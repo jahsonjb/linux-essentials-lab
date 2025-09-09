@@ -25,7 +25,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ### Ubuntu VM
 - **Ubuntu 24.04 LTS**
-- 2 vCPU, 2–4 GB RAM, 30 GB disk
+- 2 vCPU, 8 GB RAM, 40 GB disk
 - NAT adapter (VMnet8)
 - Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-db`
 
@@ -35,7 +35,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ### Rocky VM
 - **Rocky Linux 9 (Minimal)**
-- 2 vCPU, 2–4 GB RAM, 30 GB disk
+- 2 vCPU, 8 GB RAM, 40 GB disk
 - NAT adapter (VMnet8)
 - Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-pages`
 
@@ -79,7 +79,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 ### 4. Command Line Power
 - Pipes and redirection  
 
-![Piping](screenshots/piping.png)
+![Piping](screenshots/Piping.png)
 
 ---
 
@@ -99,7 +99,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ![Add User](screenshots/add_user.png)  
 ![Permissions and Owners](screenshots/permissions_and_owners.png)  
-![ACLs](screenshots/acls.png)  
+![ACLs](screenshots/ACLS.png)  
 ![Shared Directory](screenshots/shared.png)
 
 ---
