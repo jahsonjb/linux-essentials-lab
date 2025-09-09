@@ -1,7 +1,7 @@
 # 🐧 Linux Essentials Lab (LPI 010-160)
 
 This project documents my hands-on practice for the **Linux Essentials (010-160)** exam objectives.  
-The lab was built with **VMware Workstation/Fusion**, using both **Rocky Linux 9 (Minimal)** and **Ubuntu 24.04 LTS**.  
+The lab was built with **VMware Workstation Pro 17**, using both **Rocky Linux 10 Server (Minimal)** and **Ubuntu Server 24.04 LTS**.  
 
 Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to highlight similarities and differences between Debian-based and RHEL-based systems.
 
@@ -34,7 +34,7 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 ---
 
 ### Rocky VM
-- **Rocky Linux 9 (Minimal)**
+- **Rocky Linux 10 (Minimal)**
 - 2 vCPU, 7.5 GB RAM, 40 GB disk
 - NAT adapter (VMnet8)
 - Packages: `open-vm-tools`, `curl`, `wget`, `nano`, `less`, `man-pages`
