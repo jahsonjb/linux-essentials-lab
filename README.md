@@ -132,7 +132,8 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 
 ### 10. Bash, Scripts, and Automation
 - Writing and running bash scripts  
-- Cron jobs (`crontab -e`, `crontab -l`)  
+- Cron jobs (`crontab -e`, `crontab -l`)
+See /scripts/quickbackup.sh for the full backup script used in this lab
 
 ![Nano and Script](screenshots/nano_and_script.png)  
 ![Script Output](screenshots/script_output.png)  
