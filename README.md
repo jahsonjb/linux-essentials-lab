@@ -49,10 +49,10 @@ Most screenshots were taken in **Rocky Linux**, but I worked across both VMs to 
 - `uname -a`, `/etc/os-release`, `hostnamectl`  
 - Both Ubuntu and Rocky release identifiers  
 
-![System Identify (Ubuntu)](screenshots/system_identify_ubuntu.png)  
-![Ubuntu Release](screenshots/ubuntu_release.png)  
+![System Identify (Ubuntu)](screenshots/SYSTEM_IDENTIFY_ubuntu.png)  
+![Ubuntu Release](screenshots/UBUNTU_RELEASE.png)  
 ![Rocky System Identify](screenshots/rocky_system_identify.png)  
-![Rocky Release](screenshots/rocky_release.png)
+![Rocky Release](screenshots/ROCKY_RELEASE.png)
 
 ---
 
