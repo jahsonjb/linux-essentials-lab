@@ -2,13 +2,13 @@
 
 **By: Jahson Jno-Baptiste — a note to future me**
 
-If you’re rereading this, remember the point wasn’t to “do a bunch of commands.” It was to turn **Linux fundamentals**—files, shells, packages, users, permissions, services, storage, networking, and basic scripting—into **muscle memory** across **two families** of Linux. I built the lab to bounce between **Ubuntu 24.04** (Debian lineage, `apt`) and **Rocky 9** (RHEL lineage, `dnf`), because 010-160 asks you to recognize common ground and spot family differences without guessing. I took most screenshots on **Rocky** while verifying each task on both VMs. This is the path I followed, start to finish, with the checks that kept me honest.
+If you’re rereading this, remember the point wasn’t to “do a bunch of commands.” It was to turn **Linux fundamentals**—files, shells, packages, users, permissions, services, storage, networking, and basic scripting—into **muscle memory** across **two families** of Linux. I built the lab to bounce between **Ubuntu 24.04** (Debian lineage, `apt`) and **Rocky 10** (RHEL lineage, `dnf`), because 010-160 asks you to recognize common ground and spot family differences without guessing. I took most screenshots on **Rocky** while verifying each task on both VMs. This is the path I followed, start to finish, with the checks that kept me honest.
 
 ---
 
 ## Why two distros and two NIC stories mattered
 
-I stood up two VMs in VMware with modest specs (2 vCPU, 2–4 GB RAM, \~30 GB disk). Ubuntu was my “Debian view,” Rocky the “RHEL view.” The decision that paid off later was treating them like cousins, not twins:
+I stood up two VMs in VMware with modest specs (2 vCPU, 7-8 GB RAM, \~40 GB disk). Ubuntu was my “Debian view,” Rocky the “RHEL view.” The decision that paid off later was treating them like cousins, not twins:
 
 * **Service names** differ (`ssh` on Ubuntu vs `sshd` on Rocky).
 * **Logs** differ (Ubuntu’s `/var/log/syslog` vs Rocky’s `/var/log/messages` + journal).
